@@ -23,9 +23,12 @@ Background: movies have been added to database
   Then 10 seed movies should exist
 
 Scenario: sort movies alphabetically
-  When I follow "Movie Title"
   # your steps here
+  When I follow "Movie Title"
+  Then I should see "Aladdin" before "Chocolat"
+
 
 Scenario: sort movies in increasing order of release date
-  When I follow "Release Date"
   # your steps here
+  When I follow "Release Date"
+  Then I should see "The Terminator" before "The Incredibles"
